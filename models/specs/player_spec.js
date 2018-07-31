@@ -36,6 +36,12 @@ describe("Player", function () {
       assert.deepStrictEqual(player.cards, [card2]);
     });
 
+    it("should be able to select attribute", function () {
+      player.addCard(card1);
+      const result = player.selectAttribute();
+      assert.deepStrictEqual(result, "strength");
+    });
+
   });
 
 });

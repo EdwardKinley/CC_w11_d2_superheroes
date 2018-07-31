@@ -11,7 +11,16 @@ Player.prototype.removeCard = function () {
   return this.cards.shift();
 };
 
-
+Player.prototype.selectAttribute = function () {
+  const card = this.cards[0];
+  if (card.intelligence >= card.strength && card.intelligence >= card.agility) {
+    return "intelligence";
+  } else if (card.strength >= card.agility) {
+    return "strength";
+  } else {
+    return "agility";
+  }
+};
 
 
 

@@ -18,4 +18,17 @@ describe("Player", function () {
     assert.strictEqual(player.name, "Gary");
   });
 
-})
+  describe("cards", function () {
+
+    it("should begin as a cardless person", function () {
+      assert.deepStrictEqual(player.cards, []);
+    });
+
+    it("should be able to add a card", function () {
+      player.addCard(card1);
+      assert.deepStrictEqual(player.cards, [card1]);
+    });
+
+  });
+
+});

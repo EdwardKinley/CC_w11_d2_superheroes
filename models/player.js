@@ -3,6 +3,9 @@ const Player = function (name) {
   this.cards = [];
 };
 
+Player.prototype.addCard = function (card) {
+  this.cards.push(card);
+};
 
 
 

@@ -14,9 +14,19 @@ describe("Card", function () {
     assert.strictEqual(result, "Superman");
   });
 
-  it("should have a intelligence value", function () {
+  it("should have an intelligence value", function () {
     const result = card.intelligence;
     assert.strictEqual(result, 6);
+  });
+
+  it("should have a strength value", function () {
+    const result = card.strength;
+    assert.strictEqual(result, 9);
+  });
+
+  it("should have an agility value", function () {
+    const result = card.agility;
+    assert.strictEqual(result, 7);
   });
 
 });

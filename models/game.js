@@ -14,7 +14,18 @@ Game.prototype.compareCardsAndSelectWinningPlayer = function (attribute) {
   }
 };
 
-
+Game.prototype.facilitateRound = function (attribute) {
+  let winningPlayer = this.compareCardsAndSelectWinningPlayer(attribute);
+  let player1Card = this.player1.removeCard();
+  let player2Card = this.player2.removeCard();
+  if (winningPlayer === this.player1) {
+    winningPlayer.addCard(player1Card);
+    winningPlayer.addCard(player2Card);
+  } else {
+    winningPlayer.addCard(player2Card);
+    winningPlayer.addCard(player1Card);
+  }
+};
 
 
 

@@ -43,4 +43,10 @@ describe("Game", function () {
     assert.deepStrictEqual(result, player1);
   });
 
+  it("can facilitate round won by player1", function () {
+    game.facilitateRound("strength");
+    assert.deepStrictEqual(player1.cards, [card2, card3, card1, card4]);
+    assert.deepStrictEqual(player2.cards, [card5, card6]);
+  })
+
 });

@@ -14,6 +14,9 @@ describe("Card", function () {
     assert.strictEqual(result, "Superman");
   });
 
-  
+  it("should have a intelligence value", function () {
+    const result = card.intelligence;
+    assert.strictEqual(result, 6);
+  });
 
 });

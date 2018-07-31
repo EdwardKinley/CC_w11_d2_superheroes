@@ -29,6 +29,13 @@ describe("Player", function () {
       assert.deepStrictEqual(player.cards, [card1]);
     });
 
+    it("should be able to remove card", function () {
+      player.addCard(card1);
+      player.addCard(card2);
+      player.removeCard(card1);
+      assert.deepStrictEqual(player.cards, [card2]);
+    });
+
   });
 
 });
